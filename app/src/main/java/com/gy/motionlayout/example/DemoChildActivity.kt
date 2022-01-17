@@ -4,21 +4,21 @@ import android.animation.ArgbEvaluator
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
-import android.support.constraint.motion.MotionLayout
-import android.support.v4.content.ContextCompat
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
+import androidx.constraintlayout.motion.widget.MotionLayout
+import androidx.core.content.ContextCompat
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import android.util.Log
 import android.view.WindowManager
 import android.widget.TextView
 import app.layout.motion.motionlayoutexample.DummyListAdapter
 import com.gy.motionlayout.R
 
-class DemoChildActivity : AppCompatActivity(),MotionLayout.TransitionListener{
+class DemoChildActivity : AppCompatActivity(), MotionLayout.TransitionListener{
 
     var motionLayout: MotionLayout? = null
-    var recyclerView: RecyclerView? = null
+    var recyclerView: androidx.recyclerview.widget.RecyclerView? = null
     var layout = R.layout.collapsing_toolbar
     var exampleType = 0
     var titleTextView: TextView? = null
@@ -42,7 +42,7 @@ class DemoChildActivity : AppCompatActivity(),MotionLayout.TransitionListener{
         recyclerView!!.apply {
             setHasFixedSize(true)
             adapter = DummyListAdapter()
-            layoutManager = LinearLayoutManager(this@DemoChildActivity)
+            layoutManager = androidx.recyclerview.widget.LinearLayoutManager(this@DemoChildActivity)
         }
         Log.i("cccccccccccc","transitionToEnd")
 //        motionLayout!!.transitionToEnd()
@@ -73,9 +73,9 @@ class DemoChildActivity : AppCompatActivity(),MotionLayout.TransitionListener{
         motionLayout = findViewById(R.id.motionLayout)
         recyclerView = findViewById(R.id.recyclerView)
 
-//        if (layout == R.layout.collapsing_toolbar_2) {
-//            titleTextView = findViewById(R.id.title)
-//        }
+    }
+
+    override fun onTransitionStarted(p0: MotionLayout?, p1: Int, p2: Int) {
     }
 
 
@@ -85,6 +85,9 @@ class DemoChildActivity : AppCompatActivity(),MotionLayout.TransitionListener{
 
     override fun onTransitionCompleted(p0: MotionLayout?, p1: Int) {
 
+    }
+
+    override fun onTransitionTrigger(p0: MotionLayout?, p1: Int, p2: Boolean, p3: Float) {
     }
 
 }

@@ -4,31 +4,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:motion="http://schemas.android.com/tools">
 
-    //blue to orange transition
     <Transition
         app:constraintSetStart="@id/s1"
         app:constraintSetEnd="@id/s2"
-        app:duration="700"/>
+        app:duration="700">
+        <OnSwipe
+            app:dragDirection="dragRight"
+            app:touchAnchorId="@id/v1"
+            app:touchAnchorSide="right" />
 
-    //orange to blue transition
+    </Transition>
+
     <Transition
         app:constraintSetStart="@id/s2"
         app:constraintSetEnd="@id/s1"
         app:duration="700"/>
 
-    //orange to red transition
     <Transition
         app:constraintSetStart="@id/s2"
         app:constraintSetEnd="@id/s3"
         app:duration="700"/>
 
-    //red to orange transition
     <Transition
         app:constraintSetStart="@id/s3"
         app:constraintSetEnd="@id/s2"
         app:duration="700"/>
 
-    //states
     <ConstraintSet android:id="@+id/s1">
         <Constraint android:id="@id/v1"
             android:layout_width="250dp"

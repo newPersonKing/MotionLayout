@@ -1,12 +1,12 @@
 package app.layout.motion.motionlayoutexample
 
-import android.support.constraint.ConstraintLayout
-import android.support.v7.widget.RecyclerView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.gy.motionlayout.R
 
-class DummyListAdapter : RecyclerView.Adapter<DummyListAdapter.ViewHolder>() {
+class DummyListAdapter : androidx.recyclerview.widget.RecyclerView.Adapter<DummyListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DummyListAdapter.ViewHolder {
         return ViewHolder(LayoutInflater.from(parent.context)
@@ -21,6 +21,6 @@ class DummyListAdapter : RecyclerView.Adapter<DummyListAdapter.ViewHolder>() {
 
     }
 
-    class ViewHolder(val layout: ConstraintLayout) : RecyclerView.ViewHolder(layout)
+    class ViewHolder(val layout: ConstraintLayout) : androidx.recyclerview.widget.RecyclerView.ViewHolder(layout)
 
 }

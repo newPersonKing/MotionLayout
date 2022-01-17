@@ -4,8 +4,8 @@ import android.animation.ObjectAnimator
 import android.os.Build
 import android.os.Bundle
 import android.os.PersistableBundle
-import android.support.constraint.motion.MotionLayout
-import android.support.v7.app.AppCompatActivity
+import androidx.constraintlayout.motion.widget.MotionLayout
+import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import android.view.View
 import android.view.animation.BounceInterpolator
@@ -66,6 +66,12 @@ class ComplexAnimationActivity : AppCompatActivity() , MotionLayout.TransitionLi
             doBounceAnimation(shareImage)
             doBounceAnimation(seenImage)
         }
+    }
+
+    override fun onTransitionTrigger(p0: MotionLayout?, p1: Int, p2: Boolean, p3: Float) {
+    }
+
+    override fun onTransitionStarted(p0: MotionLayout?, p1: Int, p2: Int) {
     }
 
     override fun onTransitionChange(p0: MotionLayout?, p1: Int, p2: Int, p3: Float) {

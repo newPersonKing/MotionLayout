@@ -1,13 +1,13 @@
 package com.gy.motionlayout.example
 
-import android.support.constraint.ConstraintLayout
-import android.support.v7.widget.RecyclerView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
 import com.gy.motionlayout.R
 
-class MainAdapter(val data:Array<Demo>) : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
+class MainAdapter(val data:Array<Demo>) : androidx.recyclerview.widget.RecyclerView.Adapter<MainAdapter.ViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): ViewHolder {
@@ -26,7 +26,7 @@ class MainAdapter(val data:Array<Demo>) : RecyclerView.Adapter<MainAdapter.ViewH
         holder.title.text = data[position].title
     }
 
-    class ViewHolder(val layout:ConstraintLayout) : RecyclerView.ViewHolder(layout){
+    class ViewHolder(val layout: ConstraintLayout) : androidx.recyclerview.widget.RecyclerView.ViewHolder(layout){
 
         var title = layout.findViewById<TextView> (R.id.titleTextView)
         var rootLayout = layout.findViewById<ConstraintLayout>(R.id.rootLayout)

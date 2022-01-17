@@ -19,6 +19,12 @@
         <activity android:name=".CarouselActivity" />
         <activity android:name=".example.DemoChildActivity"/>
         <activity android:name=".example.ComplexAnimationActivity"/>
+        <activity android:name=".example.activity.AnimationActivity"/>
+        <activity android:name=".example.activity.AnimationCardActivity"/>
+        <activity android:name=".example.activity.AnimationCarActivity"/>
+        <activity android:name=".example.activity.ViewPagerDemoActivity"/>
+        <activity android:name=".example.activity.HuaweiTelActivity"/>
+        <activity android:name=".example.activity.EasterEggs11Activity"/>
 
     </application>
 
