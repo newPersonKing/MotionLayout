@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/motion"
+    app:layoutDescription="@xml/anime_motion_effect"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/car4"
+        android:scaleType="fitXY"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/card5"
+        android:scaleType="fitXY" />
+
+    <!--motionEffect_move 如果指定的方向都不符合 那么所有的view 都会有效果-->
+    <!--motionEffect_start 与 motionEffect_end 决定动画开始跟结束的时间-->
+    <!--motionEffect_alpha 默认透明度的变化的值-->
+    <androidx.constraintlayout.helper.widget.MotionEffect
+        android:id="@+id/fade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="iv_1,iv_2"
+        app:motionEffect_strict="true"
+        app:motionEffect_move="west"
+        app:motionEffect_start="20"
+        app:motionEffect_end="50"
+        app:motionEffect_alpha="0.5"
+        app:motionEffect_translationY="100dp"
+        app:motionEffect_translationX="50dp"
+        app:motionEffect_viewTransition="@id/coolFade"
+        />
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

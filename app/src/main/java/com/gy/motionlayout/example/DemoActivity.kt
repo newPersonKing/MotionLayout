@@ -3,13 +3,13 @@ package com.gy.motionlayout.example
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import android.util.Log
-import android.widget.Toast
 import com.gy.motionlayout.CarouselActivity
 import com.gy.motionlayout.R
 import com.gy.motionlayout.example.activity.*
+import com.gy.motionlayout.example.constraintLayout.ConstraintLayoutActivity
+import com.gy.motionlayout.example.spring.SpringAnimationActivity
+import com.gy.motionlayout.example.transition.TransitionAnimationActivity
 
 class DemoActivity : AppCompatActivity(){
 
@@ -28,7 +28,14 @@ class DemoActivity : AppCompatActivity(){
             MainAdapter.Demo("AnimationCarActivity", ExampleTypes.FULLSCREEN, 0, AnimationCarActivity::class.java),
             MainAdapter.Demo("模仿华为拨号键", ExampleTypes.FULLSCREEN, 0, HuaweiTelActivity::class.java),
             MainAdapter.Demo("android 11 彩蛋", ExampleTypes.FULLSCREEN, 0, EasterEggs11Activity::class.java),
-            MainAdapter.Demo("跟其他组件配合使用", ExampleTypes.FULLSCREEN, 0, ViewPagerDemoActivity::class.java)
+            MainAdapter.Demo("ViewTransition 使用", ExampleTypes.FULLSCREEN, 0, ViewTransitionActivity::class.java),
+            MainAdapter.Demo("Rotational 使用", ExampleTypes.FULLSCREEN, 0, RotationalActivity::class.java),
+            MainAdapter.Demo("跟其他组件配合使用", ExampleTypes.FULLSCREEN, 0, ViewPagerDemoActivity::class.java),
+            MainAdapter.Demo("SpringAnimation 展示", ExampleTypes.FULLSCREEN, 0, SpringAnimationActivity::class.java),
+            MainAdapter.Demo("TransitionAnimation 展示", ExampleTypes.FULLSCREEN, 0, TransitionAnimationActivity::class.java),
+            MainAdapter.Demo("ConstraintLayout 展示", ExampleTypes.FULLSCREEN, 0, ConstraintLayoutActivity::class.java),
+            MainAdapter.Demo("MotionEffect 展示", ExampleTypes.FULLSCREEN, 0, MotionEffectActivity::class.java),
+            MainAdapter.Demo("MotionLabel 展示", ExampleTypes.FULLSCREEN, 0, MotionLabelActivity::class.java)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {

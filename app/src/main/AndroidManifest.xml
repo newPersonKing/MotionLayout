@@ -25,6 +25,13 @@
         <activity android:name=".example.activity.ViewPagerDemoActivity"/>
         <activity android:name=".example.activity.HuaweiTelActivity"/>
         <activity android:name=".example.activity.EasterEggs11Activity"/>
+        <activity android:name=".example.activity.ViewTransitionActivity"/>
+        <activity android:name=".example.activity.RotationalActivity"/>
+        <activity android:name=".example.spring.SpringAnimationActivity"/>
+        <activity android:name="com.gy.motionlayout.example.transition.TransitionAnimationActivity"/>
+        <activity android:name=".example.constraintLayout.ConstraintLayoutActivity"/>
+        <activity android:name=".example.activity.MotionEffectActivity"/>
+        <activity android:name=".example.activity.MotionLabelActivity"/>
 
     </application>
 

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--一行三个-->
+    <!--相关属性  layout_constraintVertical_weight layout_constraintWidth_percent layout_constraintDimensionRatio-->
+    <!--layout_constraintHorizontal_chainStyle-->
+    <ImageView
+        android:id="@+id/bookCover1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="0.74:1"
+        app:layout_constraintEnd_toStartOf="@+id/bookCover2"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintWidth_percent="0.30"
+        app:layout_constraintVertical_chainStyle="spread"
+        android:src="@drawable/car4"/>
+
+    <ImageView
+        android:id="@+id/bookCover2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="0.74:1"
+        app:layout_constraintEnd_toStartOf="@+id/bookCover3"
+        app:layout_constraintStart_toEndOf="@+id/bookCover1"
+        app:layout_constraintTop_toTopOf="@+id/bookCover1"
+        app:layout_constraintWidth_percent="0.30"
+        tools:srcCompat="@tools:sample/avatars"
+        android:src="@drawable/car4"/>
+
+    <ImageView
+        android:id="@+id/bookCover3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="0.74:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bookCover2"
+        app:layout_constraintTop_toTopOf="@+id/bookCover2"
+        app:layout_constraintWidth_percent="0.30"
+        tools:srcCompat="@tools:sample/avatars"
+        android:src="@drawable/car4"/>
+
+
+    <Space
+        android:id="@+id/space1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/bookCover1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="Center"
+        app:layout_constraintTop_toBottomOf="@id/space1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="90"
+        app:layout_constraintStart_toStartOf="@id/textView1"
+        app:layout_constraintEnd_toEndOf="@id/textView1"
+        app:layout_constraintTop_toTopOf="@id/textView1"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintCircleAngle="90"
+        app:layout_constraintCircle="@id/textView1"/>
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="120"
+        app:layout_constraintStart_toStartOf="@id/textView1"
+        app:layout_constraintEnd_toEndOf="@id/textView1"
+        app:layout_constraintTop_toTopOf="@id/textView1"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintCircleAngle="120"
+        app:layout_constraintCircle="@id/textView1"/>
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:background="#bebebe"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="TextView" />
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:background="#bebebe"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="TextView" />
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:background="#bebebe"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:background="#bebebe"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="TextView" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="textView4,textView5,textView6,textView7"
+        app:flow_wrapMode="aligned"
+        app:flow_verticalGap="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

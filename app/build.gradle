@@ -34,4 +34,8 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.1'
 
     implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    // https://mvnrepository.com/artifact/androidx.dynamicanimation/dynamicanimation
+    implementation 'androidx.dynamicanimation:dynamicanimation:1.0.0'
+
 }
